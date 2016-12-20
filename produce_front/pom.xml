@@ -12,7 +12,7 @@
   <artifactId>produce_front</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>meng_pet_front Maven Webapp</name>
+  <name>produce_front Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
     <build>
