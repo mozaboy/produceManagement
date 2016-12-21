@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,6 +46,19 @@ public class IndexAction {
         resultMap.put("name","Jay");
 
         return resultMap;
+    }
+
+    @RequestMapping(value="testJson.do")
+    @ResponseBody
+    public Object testJson(Model model){
+        Person person = new Person();
+        person.setUserName("ki_boy");
+        person.setUserPassword("123456");
+        person.setAge(1);
+        person.setCreateTime(new Date());
+        person.setId(1);
+
+        return person;
     }
 
 }

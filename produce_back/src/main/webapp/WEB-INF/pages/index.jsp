@@ -9,7 +9,7 @@
 <html>
 <script src="js/jquery-3.0.0.js" type="text/javascript"></script>
 <head>
-    <title>首页</title>
+    <title>生产管理系统</title>
 </head>
 <body>
 <body>
