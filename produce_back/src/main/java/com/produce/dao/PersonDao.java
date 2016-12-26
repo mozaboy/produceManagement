@@ -1,21 +1,21 @@
 package com.produce.dao;
 
+import com.produce.mybatis.MyBatisDao;
 import com.produce.pojo.Person;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
 
-public interface PersonDao {
+@Repository
+public class PersonDao extends MyBatisDao {
 
-    int deleteByPrimaryKey(Integer id);
+    public PersonDao(){
+        super("PERSON");
+    }
 
-    int insert(Person record);
+    public List<Person> selectByParam(Map<String,Object> param){
+        return super.queryForList("selectByParam",param);
+    }
 
-    int insertSelective(Person record);
-
-    List<Person> selectByParam(Map<String,Object> param);
-
-    int updateByPrimaryKeySelective(Person record);
-
-    int updateByPrimaryKey(Person record);
 }

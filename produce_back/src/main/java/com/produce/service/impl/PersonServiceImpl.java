@@ -3,6 +3,7 @@ package com.produce.service.impl;
 import com.produce.dao.PersonDao;
 import com.produce.pojo.Person;
 import com.produce.service.IPersonService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -15,7 +16,7 @@ import java.util.Map;
 @Service("personService")
 public class PersonServiceImpl implements IPersonService {
 
-    @Resource
+    @Autowired
     private PersonDao personDao;
 
     @Override
